@@ -1,0 +1,66 @@
+ <!--header-->
+ <div class="inibla-top-header">
+   <header id="site-header" class="fixed-top">
+     <div class="container">
+       <nav class="navbar navbar-expand-lg navbar-dark stroke">
+         <a class="navbar-brand inibla-title" routerLink="/" (click)="topFunction()">
+           <img src="assets/images/inibla_white.png" alt="inibla" title="inibla" class="logo-height" />inibla
+         </a>
+         <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+           data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+           aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+           <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+         </button>
+
+         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+           <ul class="navbar-nav ml-auto">
+             <li class="nav-item @@about-active">
+               <a class="nav-link effect-3" routerLink="/about" (click)="topFunction()" i18n>About</a>
+             </li>
+             <li class="nav-item @@services-active">
+               <a class="nav-link effect-3" routerLink="/joinus" (click)="topFunction()" i18n>How It Works</a>
+             </li>
+             <li class="nav-item @@services-active">
+               <a routerLink="/faq" class="nav-link effect-3" (click)="topFunction()" i18n>FAQ</a>
+             </li>
+             <li class="nav-item">
+               <p href="#domain" class="domain nav-link effect-3 contact-p cursor-pointer" data-toggle="modal"
+                 data-target="#DomainModal" i18n>
+                 Contact
+               </p>
+             </li>
+           </ul>
+           <ul class="navbar-nav ml-auto">
+             <li class="nav-item">
+               <p class="nav-link effect-3 contact-p cursor-pointer" (click)="openModal(localeModal)">
+                 <span class="fa fa-globe"></span>&nbsp;<a i18n="@@language">Language</a>
+               </p>
+             </li>
+           </ul>
+         </div>
+       </nav>
+     </div>
+   </header>
+ </div>
+ <!--/header-->
+
+ <ng-template #localeModal let-modal>
+   <div class="modal-header">
+     <h4 class="modal-title" id="modal-basic-title">Select Language</h4>
+   </div>
+   <div class="localeModal">
+     <div class="modal-body">
+       <ul class="navbar-nav ml-auto">
+         <ng-container *ngFor="let lang of languages">
+           <li class="nav-item @@about-active">
+             <a class="nav-link effect-3" (click)="gotoLocale(lang)">
+               <span class="fas fa-globe"></span>&nbsp;{{lang.label}}</a>
+           </li>
+           <div class="modal-footer">
+           </div>
+         </ng-container>
+       </ul>
+     </div>
+   </div>
+ </ng-template>

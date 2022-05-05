@@ -1,0 +1,101 @@
+.toolbar {
+  height: 60px;
+  margin: -8px;
+  display: flex;
+  align-items: center;
+  background-color: orange;
+  color: white;
+  font-weight: 600;
+
+}
+
+.toolbar img {
+  margin: 0 35px;
+
+}
+
+.toolbar #twitter-logo {
+  height: 40px;
+  /* margin: 0 16px; */
+  margin: 0 35px;
+}
+
+.toolbar #twitter-logo:hover {
+  opacity: 0.8;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.inibla-title {
+  font-family: Comfortaa;
+}
+
+.logo-height {
+  height: 58px;
+}
+
+header {
+  padding: 0px;
+  transition: all 0.4s ease 0s;
+  background: var(--primary-color);
+  height: 60px;
+  display: grid;
+  align-items: center;
+}
+
+.contact-p {
+  line-height: 25px;
+}
+
+.cls-1 {
+  fill: none;
+  width: 400;
+  height: 400;
+}
+
+.cls-2 {
+  fill: #ffffff;
+}
+
+.mt-locale {
+  margin-top: 12px;
+}
+
+.modal-header {
+  background-color: orange;
+}
+
+.modal-title {
+  color: white;
+}
+
+.localeModal {
+  border: 1px solid orange;
+  /*  border-right: none; */
+  border-top: none;
+  padding: 10px;
+  height: 33vh;
+  overflow-y: auto;
+  border-bottom-left-radius: calc(0.3rem - 1px);
+  border-bottom-right-radius: calc(0.3rem - 1px);
+}
+
+@media only screen and (max-width: 991px) {
+
+  header.active {
+    background: rgba(0, 0, 0, 0.7) !important;
+    height: 45vh;
+  }
+
+  .localeModal {
+    height: auto;
+    overflow-y: auto;
+    border-right: 1px solid orange;
+  }
+
+  .mt-locale {
+    display: none;
+  }
+}
